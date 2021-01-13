@@ -23,3 +23,6 @@ Route::options($uri, $callback);
 Route::get('/users/1',  [UserController::class, 'index']);
 Route::get('/getData',  [UserController::class, 'getData']);
 Route::post('/postData',  [UserController::class, 'postData']);
+Route::put('/users/1',  [UserController::class, 'testPut']);
+Route::patch('/users/1',  [UserController::class, 'testPatch']);
+Route::match(['put', 'patch'], '/users/1',  [UserController::class, 'testMatch']);

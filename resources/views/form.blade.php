@@ -9,7 +9,8 @@
 </head>
 <body>
 <div class="container my-5">
-    <form action="{{ url('/postData') }}" method="POST" autocomplete="off">
+    <form action="{{ url('/users/2') }}" method="POST" autocomplete="off">
+        @method('PATCH')
         <input type="hidden" name="_token" value={{ csrf_token() }}>
         <div class="form-group">
             <label for="first_name">Primeiro nome</label>
